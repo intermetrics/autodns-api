@@ -15,6 +15,11 @@ Design goals
 
 Usage
 -----
+### Load classes
+``` php
+$loader = require(__DIR__ . '/vendor/autoload.php');
+$loader->add('Autodns', __DIR__ . '/src/Autodns');
+```
 
 ### ApiClient
 
@@ -36,7 +41,7 @@ $client = Factory::create($accountInfo);
 
 ``` php
 use Autodns\Api\Client\Request\Task\Query;
-use Autodns\Api\Client\Request\TaskBuilder\DomainInquireList;
+use Autodns\Api\Client\Request\Task\DomainInquireList;
 
 $query = new Query();
 $query = $query->addOr(
