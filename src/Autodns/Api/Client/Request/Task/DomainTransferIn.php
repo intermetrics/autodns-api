@@ -8,6 +8,7 @@ class DomainTransferIn implements Task
 {
     private $domainData = [];
     private $replyTo;
+    private $ctid;
 
     /**
      * @param array $domainData
@@ -22,6 +23,12 @@ class DomainTransferIn implements Task
     public function replyTo($replyTo)
     {
         $this->replyTo = $replyTo;
+        return $this;
+    }
+
+    public function ctid($ctid)
+    {
+        $this->ctid = $ctid;
         return $this;
     }
 
@@ -56,8 +63,9 @@ class DomainTransferIn implements Task
     public function asArray()
     {
         $array = [
-            'code' => '0104',
-            'domain' => $this->domainData
+            'code'      => '0104',
+            'ctid'      => $this->ctid,
+            'domain'    => $this->domainData,
         ];
         $array['domain']['confirm_order'] = 1;
 
