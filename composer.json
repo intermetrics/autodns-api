@@ -4,11 +4,11 @@
     "keywords": ["autodns-api", "autodns-client"],
     "license": "MIT",
     "require": {
-        "kriswallsmith/buzz": "dev-master"
+        "kriswallsmith/buzz": "^0.16"
     },
     "require-dev": {
-        "schnipseljagd/testdatabuilder": "dev-master",
-        "satooshi/php-coveralls": "dev-master"
+        "schnipseljagd/testdatabuilder": "^0.2",
+        "satooshi/php-coveralls": "^2.0"
     },
     "autoload": {
         "psr-0": { "Autodns": "src" }
