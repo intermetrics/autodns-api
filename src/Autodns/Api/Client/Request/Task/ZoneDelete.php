@@ -9,16 +9,6 @@ class ZoneDelete implements Task
     private $zone;
 
     /**
-     * @param $domain
-     * @return $this
-     */
-    public function domain($domain)
-    {
-        $this->zone = ['name' => $domain];
-        return $this;
-    }
-
-    /**
      * @param $zone
      * @return $this
      */

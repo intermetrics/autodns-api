@@ -6,28 +6,23 @@ use Autodns\Api\Client\Request\Task;
 
 class ZoneInquire implements Task
 {
-    private $domain;
+    private $zone;
 
     /**
-     * @param $domain
+     * @param $zone
      * @return $this
      */
-    public function domain($domain)
+    public function zone($zone)
     {
-        $this->domain = $domain;
+        $this->zone = $zone;
         return $this;
     }
 
-    /**
-     * @return array
-     */
     public function asArray()
     {
-        $array = [
+        return [
             'code'  => '0205',
-            'zone'  => ['name' => $this->domain],
+            'zone'  => $this->zone,
         ];
-
-        return $array;
     }
 }
